@@ -1,0 +1,18 @@
+here are the mapreduce code to word counts
+
+1. mapper code
+2. reducer code
+
+
+hadoop jar /usr/local/hadoop/share/hadoop/tools/lib/hadoop-streaming-2.7.2.jar \
+-file /home/pankaj/bunny_13-12-16/hadoop_mapreduce/mapper.py \
+-mapper "mapper.py" \
+-file /home/pankaj/bunny_13-12-16/hadoop_mapreduce/reducer.py    \
+-reducer "reducer.py" \
+-input /bunny/bunny.csv  -output /bunny/wc1
+
+
+
+
+-D mapred.map.tasks=5 \
+-D mapred.reduce.tasks=10 \
