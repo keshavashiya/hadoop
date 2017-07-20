@@ -1,0 +1,23 @@
+ cd usr/local/hadoop
+  136  cd /usr/local/hadoop/
+  137  bin/hadoop dfs -mkdir /container
+  138  bin/hadoop dfs -put /home/shubham/Desktop/inputdata/input.txt /container
+  139  cd ..
+  140  cd
+  141  cd /home/shubham/Desktop
+  193  bin/hadoop com.sun.tools.javac.Main /home/shubham/Desktop/wordcountf/WordCount.java
+  194  cd
+  195  cd /home/shubham/Desktop
+  196  cd wordcountf
+  197  jar -cvf wordcountj.jar -C /home/shubham/Desktop/wordcountf/wordcountc .
+  198  cd
+  199  cd /usr/local/hadoop
+    209  bin/hadoop jar /home/shubham/Desktop/wordcountf/wordcountj.jar WordCount /container/input.txt /outputdir
+  210  hadoop fs -ls
+  211  hadoop dfs -ls
+  212  bin/hadoop fs -ls
+  213  cd
+  214  cd /usr/local/hadoop/
+  215  bin/hadoop dfs -mkdir /container
+  216  history
+
